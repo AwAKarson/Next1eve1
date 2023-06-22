@@ -1,0 +1,38 @@
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Puzzle</title>
+        <link href="style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    </head>
+    
+    <body>
+        <div class="wrapper">
+            <div class="radioContainer">
+                <input type="radio" name="difficulty" id="3x3" checked="true" value="0">
+                <label for="3x3">3x3<br>1 pt</label>
+                <input type="radio" name="difficulty" id="4x4" value="1">
+                <label for="4x4">4x4<br>2 pts</label>
+                <input type="radio" name="difficulty" id="5x5" value="2">
+                <label for="5x5">5x5<br>3 pts</label>
+            </div>
+            <div class="container">
+                <canvas id="wheel"></canvas>
+                <button id="spin_btn">Spin</button>
+                <img src="../spinner-arrow-.svg" alt="" srcset="">
+            </div>
+            <div id="final_result">
+                <p>Click On the Spin Button To Start</p>
+            </div>
+            <a href="puzzle.html">
+                <img src="../YA_logo.png" alt="" id="logo">
+            </a>
+            <a href="../zh/puzzle.html" id="change_version"><p>中文版本</p></a>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
