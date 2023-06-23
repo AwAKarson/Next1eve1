@@ -1,6 +1,7 @@
 const wheel = document.querySelector("#wheel")
 const spinBtn = document.querySelector("#spin_btn")
 const finalValue = document.querySelector("#final_result")
+const changeVersion = document.querySelector("#change_version")
 var radioChecked = 0
 const link =  [["https://puzzel.org/jigsaw/play?p=-NY9S84TyAyTzE1vWK7b", "https://puzzel.org/jigsaw/play?p=-NYBO5ahMGfvl3FRUCAB",
                 "https://puzzel.org/jigsaw/play?p=-NYBUHF3HM-Sl3pvWxWd", "https://puzzel.org/jigsaw/play?p=-NYBV9ytE2r0rELzNO0I",
@@ -52,7 +53,7 @@ let myChart = new Chart(wheel, {
                 color: "#ffffff",
                 formatter: (_, context) => 
                 context.chart.data.labels[context.dataIndex],
-                font: {size: 18},
+                font: {size: 16},
             },
         },
     },
@@ -63,6 +64,7 @@ const valueGenerator = (angleValue) => {
         if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
             finalValue.innerHTML = `<p>${result[i.value]}</p><br><a href=${link[radioChecked][i.value]} target="_blank">請按我</a>`
             spinBtn.disabled = false
+            changeVersion.style.display = "none"
             break
         }
     }
@@ -73,6 +75,7 @@ let resultValueArray = [144, 89, 55, 34, 21, 13, 8, 5, 3, 2, 1]
 let resultValue = resultValueArray[0];
 spinBtn.addEventListener("click", () => {
     radioChecked = document.querySelector('input[name=difficulty]:checked').value;
+    changeVersion.style.display = "block"
     spinBtn.disabled = true;
     finalValue.innerHTML = `<p>祝你好運！</p>`;
     let randomDegree = Math.floor(Math.random() * (355 - 0 + 1) + 0);
