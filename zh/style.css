@@ -20,15 +20,18 @@ html, body {
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    padding: 4rem;
+    padding: 2rem;
     border-radius: 1em;
     box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: 70%;
 }
 
 #wheel {
@@ -76,6 +79,7 @@ html, body {
     margin-top: 1em;
     color: #6f6f6f;
     font-weight: 500;
+    padding: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -96,7 +100,7 @@ label {
     font-size: 30px;
     border: 2px solid #53B0AE;
     border-radius: 5px;
-    padding-top: 12.5px;
+    padding-top: 15px;
     font-weight: 500;
     height: 100px;
     text-align: center;
@@ -107,6 +111,7 @@ label {
     flex-direction: row;
     padding-bottom: 30px;
     gap: 5px;
+    width: 80%;
 }
 input[type="radio"]:checked + label {
     background-color: #53B0AE;
@@ -115,9 +120,8 @@ input[type="radio"]:checked + label {
 }
 #logo {
     position: relative;
-    margin-top: 30px;
+    margin-top: 15px;
     height: 70px;
-    left: 25%;
 }
 
 a:link, a:visited {
@@ -127,7 +131,6 @@ a:link, a:visited {
 
 #change_version {
     font-size: 1.5em;
-    margin-top: 1.5em;
     color: #b680df;
     font-weight: 500;
 }
